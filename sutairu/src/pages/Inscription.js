@@ -15,7 +15,7 @@ function Inscription2() {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/inscription', values, {
+      const response = await axios.post('http://localhost:5001/inscription', values, {
         headers: {
           'Content-Type': 'application/json',
         }

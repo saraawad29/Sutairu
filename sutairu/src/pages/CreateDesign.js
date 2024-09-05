@@ -18,7 +18,7 @@ export default function CreateDesign() {
 
   const handleSave = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/article', {
+      const response = await axios.post('http://localhost:5001/article', {
         email: "lulu@test.com", 
         hoodie: selectedChoix,
         taille: selectedSize,

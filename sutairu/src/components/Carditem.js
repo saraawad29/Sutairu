@@ -8,7 +8,7 @@ import deleteSvg from "../icons/deleteSvg.svg";
 const CardItem = ({ item, ajouterAuPanier }) => {
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:5000/article/${item.id}`);
+      const response = await axios.delete(`http://localhost:5001/article/${item.id}`);
       alert("Article supprimé avec succès");
       window.location.reload();
     } catch (error) {
@@ -18,7 +18,7 @@ const CardItem = ({ item, ajouterAuPanier }) => {
 
   const handleAddToCart = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/panier', {
+      const response = await axios.post('http://localhost:5001/panier', {
         user: "lulu@test.com", // Remplacer par l'utilisateur actuel
         articleId: item.id,
         quantite: 1

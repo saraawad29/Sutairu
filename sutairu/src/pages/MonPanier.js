@@ -12,7 +12,7 @@ function MonPanier() {
   useEffect(() => {
     const fetchPanier = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/panier/lulu@test.com'); 
+        const response = await axios.get('http://localhost:5001/panier/lulu@test.com'); 
         setPanier(response.data.articles);
       } catch (error) {
         console.error('Erreur lors de la récupération du panier :', error);
@@ -24,7 +24,7 @@ function MonPanier() {
 
   const handleDelete = async (articleId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/panier/lulu@test.com/${articleId}`);
+      const response = await axios.delete(`http://localhost:5001/panier/lulu@test.com/${articleId}`);
       alert("Article supprimé avec succès");
       window.location.reload();
     } catch (error) {
